@@ -8,8 +8,8 @@ After=hdfs.service yarn.service jobhistory.service hive-metastore.service hive-s
 User=hduser
 Group=hadoop
 Type=forking
-ExecStart=/usr/local/spark/sbin/start-history-server.sh hdfs://192.168.56.100:8020/eventLog
-ExecStop=/usr/local/spark/sbin/stop-history-server.sh hdfs://192.168.56.100:8020/eventLog
+ExecStart=/usr/local/spark/sbin/start-history-server.sh hdfs://192.168.56.100:8020/spark/spark-eventLog
+ExecStop=/usr/local/spark/sbin/stop-history-server.sh hdfs://192.168.56.100:8020/spark/spark-eventLog
 WorkingDirectory=/usr/local/spark
 Environment=JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 Environment=HADOOP_HOME=/usr/local/hadoop
