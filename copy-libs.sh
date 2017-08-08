@@ -1,6 +1,6 @@
 #!/bin/bash
 #### Sqoop com suporte a MySQL
-hdfs dfs -put /usr/local/sqoop/lib/mysql-connector-java-5.1.38-bin.jar /user/hduser/share/lib/lib*/sqoop
+hdfs dfs -put -f /usr/local/sqoop/lib/mysql-connector-java-5.1.38-bin.jar /user/hduser/share/lib/lib*/sqoop
 
 #### Sqoop com suporte a HBase
 hdfs dfs -put -f /usr/local/hbase/lib/hbase* /user/hduser/share/lib/lib*/sqoop
