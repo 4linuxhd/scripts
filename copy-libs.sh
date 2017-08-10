@@ -1,35 +1,38 @@
 #!/bin/bash
 
-#### Sqoop com suporte a MySQL
+#### Sqoop com suporte ao MySQL
 hdfs dfs -put -f /usr/local/sqoop/lib/mysql-connector-java-5.1.38-bin.jar /user/hduser/share/lib/lib*/sqoop
 
-#### Sqoop com suporte a HBase
+#### Sqoop com suporte ao Hive
+dfs -put -f /usr/local/hive/lib/* /user/hduser/share/lib/lib*/sqoop
+
+#### Sqoop com suporte ao HBase
 hdfs dfs -put -f /usr/local/hbase/lib/hbase* /user/hduser/share/lib/lib*/sqoop
 hdfs dfs -put -f /usr/local/hbase/lib/metrics* /user/hduser/share/lib/lib*/sqoop
 hdfs dfs -put -f /usr/local/hbase/lib/high* /user/hduser/share/lib/lib*/sqoop
 hdfs dfs -put -f /usr/local/hbase/lib/htrace* /user/hduser/share/lib/lib*/sqoop
 
-#### Hive com suporte a HBase
+#### Hive com suporte ao HBase
 hdfs dfs -put -f /usr/local/hive/lib/*hbase* /user/hduser/share/lib/lib*/hive
 hdfs dfs -put -f /usr/local/hive/lib/metrics* /user/hduser/share/lib/lib*/hive
 hdfs dfs -put -f /usr/local/hive/lib/hive-hbase* /user/hduser/share/lib/lib*/hive
 hdfs dfs -put -f /usr/local/hive/lib/htra* /user/hduser/share/lib/lib*/hive
 
-#### Hive com suporte a Tez
+#### Hive com suporte ao Tez
 hdfs dfs -put -f /usr/local/tez/*.jar /user/hduser/share/lib/lib*/hive
 hdfs dfs -put -f /usr/local/tez/lib/common* /user/hduser/share/lib/lib*/hive
 
-#### Pig com suporte a HBase
+#### Pig com suporte ao HBase
 hdfs dfs -put -f /usr/local/pig/lib/h2/hbase* /user/hduser/share/lib/lib*/pig
 hdfs dfs -put -f /usr/local/hbase/lib/htrace* /user/hduser/share/lib/lib*/pig
 hdfs dfs -put -f /usr/local/hbase/lib/metrics* /user/hduser/share/lib/lib*/pig
 hdfs dfs -put -f /usr/local/hbase/lib/high* /user/hduser/share/lib/lib*/pig
 
-#### Pig com suporte a Tez
+#### Pig com suporte ao Tez
 hdfs dfs -put -f /usr/local/tez/*.jar /user/hduser/share/lib/lib*/pig
 hdfs dfs -put -f /usr/local/tez/lib/common* /user/hduser/share/lib/lib*/pig
 
-#### Pig com suporte a Hive HCatalog
+#### Pig com suporte ao Hive e HCatalog
 hdfs dfs -put -f /usr/local/pig/lib/hive-* /user/hduser/share/lib/lib*/pig
 hdfs dfs -put -f /usr/local/pig/lib/h2/hive-* /user/hduser/share/lib/lib*/pig
 hdfs dfs -put -f /usr/local/hive/lib/lib* /user/hduser/share/lib/lib*/pig
