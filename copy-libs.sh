@@ -33,8 +33,8 @@ hdfs dfs -put -f /usr/local/tez/*.jar /user/hduser/share/lib/lib*/pig
 hdfs dfs -put -f /usr/local/tez/lib/common* /user/hduser/share/lib/lib*/pig
 
 #### Pig com suporte ao Hive e HCatalog
-hdfs dfs -put -f /usr/local/pig/lib/hive-* /user/hduser/share/lib/lib*/pig
-hdfs dfs -put -f /usr/local/pig/lib/h2/hive-* /user/hduser/share/lib/lib*/pig
-hdfs dfs -put -f /usr/local/hive/lib/lib* /user/hduser/share/lib/lib*/pig
+hdfs dfs -put -f /usr/local/hive/lib/* /user/hduser/share/lib/lib*/pig
 hdfs dfs -put -f /usr/local/hive/hcatalog/share/hcatalog/* /user/hduser/share/lib/lib*/pig
 hdfs dfs -put -f /usr/local/hive/hcatalog/share/webhcat/java-client/* /user/hduser/share/lib/lib*/pig
+hdfs dfs -put -f /usr/local/pig/lib/hive-* /user/hduser/share/lib/lib*/pig
+hdfs dfs -put -f /usr/local/pig/lib/h2/hive-* /user/hduser/share/lib/lib*/pig
